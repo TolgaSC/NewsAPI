@@ -1,0 +1,106 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-size: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    height: 50px;
+    border-radius: 10px;
+}
+
+form h2 {
+    color: white;
+}
+
+form img {
+    width: 60px;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form div input {
+    width: 250px;
+}
+form div input[type='text'] {
+    padding: 8px;
+    margin-right: 5px;
+}
+
+form div button {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+form select {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(16, 16, 16);
+    margin-top: 50px;
+    margin: 0 auto;
+    
+    border-bottom: #000;
+}
+
+section h1 {
+    font-size: 2.8rem;
+    color: #000;
+    background-color: rgba(143, 143, 143, 0.025);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 40px 40px;
+
+}
+
+section h2 {
+    font-size: 2.7rem;
+}
+
+section article {
+    padding: 0 45px;
+}
+
+section article p {
+    font-size: 1.2rem;
+    color: #000;
+    text-align: left;
+    padding: 0 45px;
+}
+
+section img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+section figure figcaption {
+    font-size: 1.6rem;
+    margin: 30px 0;
+}
+
+section figure figcaption a {
+    color: #000;
+}
+
+
