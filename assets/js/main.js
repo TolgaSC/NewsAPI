@@ -2,7 +2,7 @@
 let inputField = document.getElementById("inputText");
 let section = document.querySelector('section');
 let lang = document.querySelector('select');
-let inputValue = inputField.value;
+
 
 
 // News API Fetch + Function
@@ -12,6 +12,8 @@ let getNews = () => {
         return;
     };
 
+    let inputValue = inputField.value;
+    
     fetch(`https://newsapi.org/v2/everything?q=${inputValue}&language=${lang.value}&apiKey=1b17cead30934354ae3e637d14a92ba6`)
         .then(response => response.json())
         .then(data => {
