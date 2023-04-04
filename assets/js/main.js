@@ -3,7 +3,6 @@ console.log("Works");
 // Selecting the Fields 
 let inputField = document.getElementById("inputText");
 let section = document.querySelector('section');
-let logo = document.createElement('img');
 let lang = document.querySelector('select');
 console.log(inputField);
 console.log(section);
@@ -24,34 +23,20 @@ let getNews = () => {
         .then(response => response.json())
         .then(data => {
 
-            // forEach News Func
-            // data.articles.forEach(news => {
-            //     section.innerHTML += `<h1>${news.title}</h1>`
-            //     if (news.author === "null") {
-            //         section.innerHTML += " ";
-            //     } else {
-            //         section.innerHTML += `<p>By ${news.author}</p>`
-            //     }     
-            //     if (news.urlToImage === `src="null"`) {
-            //         section.innerHTML += " ";
-            //     } else {
-            //         section.innerHTML += `<figure><figcaption><img src="${news.urlToImage}">${news.description} <a href="${news.url}">[Read more]</a> </figcaption></figure>`
-            //     }
-            // });        
+            // Hiding news without images
+                data.articles.forEach(news => {
+                    if (news.urlToImage != null) {
+                        section.innerHTML += 
+                        `<article>
+                        <h1>${news.title}</h1>
+                        <p>By ${news.author}</p>
+                        <figure><figcaption><img src="${news.urlToImage}">${news.description} <a href="${news.url}">[Read more]</a> </figcaption></figure>
+                        </article>`
+                    } else {
+                        console.log("Test");
+                    }
+                    }); 
+                });
 
-            data.articles.forEach(news => {
-                if (data == null) {
-                    section.style.display = "none";
-                } else {
-                    section.innerHTML += 
-                    `<article>
-                    <h1>${news.title}</h1>
-                    <p>By ${news.author}</p>
-                    <figure><figcaption><img src="${news.urlToImage}">${news.description} <a href="${news.url}">[Read more]</a> </figcaption></figure>
-                    </article>`
-                }
-                });  
-
-        });
 }
 
